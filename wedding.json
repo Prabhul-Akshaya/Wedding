@@ -1,0 +1,95 @@
+{
+  "couple": {
+    "bride": "Akshaya S.G",
+    "groom": "Prabhul D.P",
+    "displayName": "Bride & Groom",
+    "heroImage": "images/couple.jpg",
+    "coupleImage": "images/couple-2.jpg"
+  },
+  "date": {
+    "display": "13 September 2026",
+    "day": "Sunday",
+    "time": "11:20 AM - 11.40 AM",
+    "iso": "2026-09-13T11:20:00+05:30"
+  },
+  "location": {
+    "venue": "",
+    "address": "Sree Dharmasastha Devaswam Temple Auditorium, Bhoothakulam",
+    "city": "",
+    "mapUrl": "https://maps.app.goo.gl/L6TRM4SLByoUsEjq7"
+  },
+  "invitation": {
+    "title": "Together with their families",
+    "message": "With joyful hearts, we invite you to celebrate the beginning of our forever."
+  },
+  "families": {
+    "bride": "Mr Syamprasad(Late) & Mrs Geetha",
+    "groom": "Mr Prasannan A.C & Mrs Deeparani A.S"
+  },
+  "story": {
+    "enabled": true,
+    "title": "Our Story",
+    "paragraphs": [
+      "Every beautiful journey begins with a moment.",
+      "Add your story here \u2014 how you met, the memories you made, and the journey that brought you together."
+    ]
+  },
+  "events": [
+    {
+      "name": "Wedding Ceremony",
+      "date": "13 September 2026",
+      "time": "11:20 AM - 11.40 AM",
+      "venue": "Wedding Venue",
+      "address": "Sree Dharmasastha Devaswam Temple Auditorium, Bhoothakulam",
+      "description": "Join us as we begin our journey together.",
+      "mapUrl": "https://maps.app.goo.gl/L6TRM4SLByoUsEjq7",
+      "icon": "heart"
+    },
+    {
+      "name": "Reception",
+      "date": "13 September 2026",
+      "time": "5:00 PM - 8.00 PM",
+      "venue": "Crystal Convention Centre",
+      "address": "Nagaroor",
+      "description": "An evening of love and celebration.",
+      "mapUrl": "https://maps.app.goo.gl/6xq4EN5ta6XFhqu4A",
+      "icon": "ring"
+    }
+    
+  ],
+  "gallery": [
+    "images/gallery-1.jpg",
+    "images/gallery-2.jpg",
+    "images/gallery-3.jpg",
+    "images/gallery-4.jpg",
+    "images/gallery-5.jpg",
+    "images/gallery-6.jpg"
+  ],
+  "venueImage": "images/venue.jpg",
+  "rsvp": {
+    "enabled": true,
+    "message": "We would love to celebrate this special day with you.",
+    "contactName": "Prabhul",
+    "phone": "+918075950791",
+    "whatsapp": "+918075950791",
+    "deadline": "12 September 2026",
+    "messageTemplate": "Congratulations!! 🎉 Wishing you both lots of happiness and beautiful moments ahead. I’ll surely come and be a part of your special day and wish you in person! ❤️"
+  },
+  "music": {
+    "enabled": false,
+    "file": "assets/music.mp3",
+    "autoplay": false,
+    "loop": true
+  },
+  "theme": {
+    "primary": "#7A1838",
+    "secondary": "#C8A24A",
+    "background": "#FBF7EF",
+    "surface": "#FFFDF8",
+    "text": "#35251F",
+    "muted": "#75655D"
+  },
+  "footer": {
+    "text": "Groom's party starts at 09.00 AM  ||  Reception starts at 10.00 AM"
+  }
+}

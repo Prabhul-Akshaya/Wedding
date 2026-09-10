@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#7A1838">
+  <meta name="description" content="A beautiful wedding invitation">
+  <title>Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="loader" class="loader"><div class="loader-ring"></div><span>Loading invitation…</span></div>
+
+  <header class="topbar" id="topbar">
+    <a href="#hero" class="brand" id="brand">♥</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Wedding sections">
+      <a href="#hero">Home</a><a href="#story">Story</a><a href="#events">Events</a>
+      <a href="#gallery">Gallery</a><a href="#venue">Venue</a><a href="#rsvp">RSVP</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow" id="heroTitle"></p>
+        <h1><span id="brideName"></span><i>&</i><span id="groomName"></span></h1>
+        <div class="ornament"><span></span><b>♥</b><span></span></div>
+        <p class="hero-date" id="heroDate"></p>
+        <p class="hero-location" id="heroLocation"></p>
+        <a href="#invitation" class="scroll-cue" aria-label="Scroll to invitation"><span>Scroll to begin</span><b>↓</b></a>
+      </div>
+    </section>
+
+    <section id="invitation" class="section invitation">
+      <div class="container narrow reveal">
+        <p class="eyebrow dark" id="inviteTitle"></p>
+        <div class="ornament dark"><span></span><b>❧</b><span></span></div>
+        <p class="lead" id="inviteMessage"></p>
+        <div class="families">
+          <div><span>With the blessings of</span><strong id="brideFamily"></strong></div>
+          <div class="family-divider">♥</div>
+          <div><span>And the love of</span><strong id="groomFamily"></strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="countdown" class="section countdown-section">
+      <div class="container reveal">
+        <p class="eyebrow dark">Counting down to forever</p>
+        <div class="countdown" id="countdownGrid">
+          <div><strong id="days">00</strong><span>Days</span></div>
+          <div><strong id="hours">00</strong><span>Hours</span></div>
+          <div><strong id="minutes">00</strong><span>Minutes</span></div>
+          <div><strong id="seconds">00</strong><span>Seconds</span></div>
+        </div>
+        <p class="countdown-message" id="countdownMessage"></p>
+      </div>
+    </section>
+
+    <section id="story" class="section story">
+      <div class="container narrow reveal">
+        <p class="eyebrow dark">A little about us</p>
+        <h2 id="storyTitle">Our Story</h2>
+        <div class="floral-line"></div>
+        <div id="storyBody" class="story-body"></div>
+      </div>
+    </section>
+
+    <section id="events" class="section events">
+      <div class="container reveal">
+        <p class="eyebrow dark">Save the dates</p>
+        <h2>Wedding Events</h2>
+        <div class="event-list" id="eventList"></div>
+      </div>
+    </section>
+
+    <section id="couple" class="photo-break">
+      <div class="photo-break-image" id="coupleImage"></div>
+      <div class="photo-break-caption reveal"><span>Two hearts</span><b>One beautiful journey</b></div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="container reveal">
+        <p class="eyebrow dark">Captured memories</p>
+        <h2>Our Moments</h2>
+        <div class="gallery" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <section id="venue" class="section venue">
+      <div class="container venue-grid reveal">
+        <div class="venue-image-wrap"><img id="venueImage" alt="Wedding venue" loading="lazy"></div>
+        <div class="venue-info">
+          <p class="eyebrow dark">The celebration</p>
+          <h2 id="venueName"></h2>
+          <p id="venueAddress"></p>
+          <a id="mapLink" class="gold-btn" target="_blank" rel="noopener">Open in Google Maps <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section rsvp">
+      <div class="container narrow reveal">
+        <p class="eyebrow">We hope you can join us</p>
+        <h2>RSVP</h2>
+        <p id="rsvpMessage" class="rsvp-message"></p>
+        <div class="rsvp-details">
+          <p><span>Kindly respond by</span><strong id="rsvpDeadline"></strong></p>
+          <p><span>Contact</span><strong id="rsvpContact"></strong></p>
+        </div>
+        <a id="whatsappLink" class="whatsapp-btn" target="_blank" rel="noopener">RSVP on WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="closing" class="closing">
+      <div class="closing-inner reveal">
+        <p>Two hearts. One beautiful journey.</p>
+        <h2><span id="closingBride"></span> <i>&</i> <span id="closingGroom"></span></h2>
+        <div class="ornament"><span></span><b>♥</b><span></span></div>
+        <strong id="closingDate"></strong>
+      </div>
+    </section>
+  </main>
+
+  <footer><span id="footerText"></span> <b>♥</b> <span id="footerCouple"></span></footer>
+
+  <button class="music-btn hidden" id="musicBtn" aria-label="Play wedding music">♫</button>
+
+  <div class="lightbox hidden" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+    <img id="lightboxImage" alt="">
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+    <span class="lightbox-counter" id="lightboxCounter"></span>
+  </div>
+
+  <audio id="weddingAudio" preload="none"></audio>
+  <script src="js/app.js"></script>
+</body>
+</html>
