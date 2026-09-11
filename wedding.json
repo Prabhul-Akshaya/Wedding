@@ -78,7 +78,7 @@
     "messageTemplate": "Congratulations!! 🎉 Wishing you both lots of happiness and beautiful moments ahead. I’ll surely come and be a part of your special day and wish you in person! ❤️"
   },
   "music": {
-    "enabled": false,
+    "enabled": true,
     "file": "assets/music.mp3",
     "autoplay": false,
     "loop": true
