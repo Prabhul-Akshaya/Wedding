@@ -11,8 +11,23 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--background);color:var(--text);font-family:var(--sans);line-height:1.7}
+html{
+  scroll-behavior:smooth;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+body{
+  margin:0;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  background:var(--background);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.7;
+}
 body.menu-open{overflow:hidden}
 a{color:inherit;text-decoration:none}
 button{font:inherit}
@@ -52,8 +67,18 @@ button{font:inherit}
 @keyframes bounce{50%{transform:translateY(7px)}}
 
 .section{padding:110px 20px}
-.container{width:min(1100px,100%);margin:auto}.narrow{max-width:760px;text-align:center}
-.invitation{text-align:center;background:var(--surface);position:relative}
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+}
+.narrow{max-width:760px;text-align:center}
+.invitation{
+  text-align:center;
+  background:var(--surface);
+  position:relative;
+  overflow:hidden;
+}
 .invitation:before,.invitation:after{content:"";position:absolute;width:160px;height:160px;border:1px solid rgba(200,162,74,.18);border-radius:50%}
 .invitation:before{left:-100px;top:80px}.invitation:after{right:-100px;bottom:80px}
 .lead{font-family:var(--serif);font-size:clamp(27px,4vw,42px);line-height:1.25;margin:35px auto;max-width:650px}
@@ -123,7 +148,36 @@ footer{background:#2b1b18;color:#c9b9ae;text-align:center;padding:22px;font-size
 .lightbox-counter{position:absolute;bottom:18px;color:#fff;font-size:10px;letter-spacing:.15em}
 
 .reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
+/* Prevent horizontal overflow */
+html{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
 
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+img,
+video,
+iframe,
+svg{
+  max-width:100%;
+}
+
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+/* Keep decorative elements inside the invitation section */
+.invitation{
+  overflow:hidden;
+}
 @media(max-width:700px){
   .topbar{height:60px;padding:0 18px}.menu-btn{display:block;z-index:3}
   .nav{position:fixed;inset:0;background:rgba(43,27,24,.98);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:28px;font-size:13px;opacity:0;pointer-events:none;transition:.3s}
