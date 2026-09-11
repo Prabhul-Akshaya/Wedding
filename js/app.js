@@ -257,16 +257,67 @@ function updateLightbox() {
 }
 
 function initMusic() {
+
   const config = wedding.music || {};
-  const btn = $("musicBtn"), audio = $("weddingAudio");
-  if (!config.enabled || !config.file) { btn.classList.add("hidden"); return; }
-  audio.src = config.file; audio.loop = config.loop !== false;
+  const btn = $("musicBtn");
+  const audio = $("weddingAudio");
+
+  if (!config.enabled || !config.file) {
+    btn.classList.add("hidden");
+    return;
+  }
+
+  audio.src = config.file;
+  audio.loop = config.loop !== false;
+
   btn.classList.remove("hidden");
+
+  // Start / stop music from the music button
   btn.onclick = async () => {
-    if (audio.paused) { await audio.play(); btn.classList.add("playing"); btn.textContent = "❚❚"; }
-    else { audio.pause(); btn.classList.remove("playing"); btn.textContent = "♫"; }
+    if (audio.paused) {
+      try {
+        await audio.play();
+        btn.classList.add("playing");
+        btn.textContent = "❚❚";
+      } catch (err) {
+        console.log("Music could not be played:", err);
+      }
+    } else {
+      audio.pause();
+      btn.classList.remove("playing");
+      btn.textContent = "♫";
+    }
   };
-  audio.addEventListener("ended", () => { btn.classList.remove("playing"); btn.textContent = "♫"; });
+
+  // Start music on the first user interaction anywhere on the page
+  const startMusicOnInteraction = async () => {
+
+    if (!audio.paused) return;
+
+    try {
+      await audio.play();
+
+      btn.classList.add("playing");
+      btn.textContent = "❚❚";
+
+      // We only need this once
+      document.removeEventListener("click", startMusicOnInteraction);
+      document.removeEventListener("touchstart", startMusicOnInteraction);
+      document.removeEventListener("pointerdown", startMusicOnInteraction);
+
+    } catch (err) {
+      console.log("Waiting for another interaction to start music:", err);
+    }
+  };
+
+  document.addEventListener("click", startMusicOnInteraction);
+  document.addEventListener("touchstart", startMusicOnInteraction, { passive: true });
+  document.addEventListener("pointerdown", startMusicOnInteraction);
+
+  audio.addEventListener("ended", () => {
+    btn.classList.remove("playing");
+    btn.textContent = "♫";
+  });
 }
 
 function escapeHtml(value) {
